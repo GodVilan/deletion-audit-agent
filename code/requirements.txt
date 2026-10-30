@@ -1,0 +1,5 @@
+# Runtime (Python >= 3.10; developed on 3.13)
+anthropic==0.120.2      # intent agent + media extraction (only used when ANTHROPIC_API_KEY is set)
+PyMuPDF==1.27.2         # PDF text layer + page renders for media extraction (live runs only)
+# Dev / tests
+pytest==9.0.3

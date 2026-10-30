@@ -1,0 +1,14 @@
+activity_id,event_time,event_type,source_system,target_system,resource_id,reported_result,details
+activity_1,2025-01-01T00:00:00Z,UPDATE_RECORD,profile_service,x,account_9090,SUCCESS,Policy action completed for account_9090.
+activity_2,2025-01-01T00:00:00Z,UPDATE_RECORD,profile_service,x,search_9190,SUCCESS,Policy action completed for search_9190.
+activity_3,2025-01-01T00:00:00Z,UPDATE_RECORD,profile_service,x,analytics_9290,SUCCESS,Policy action completed for analytics_9290.
+activity_4,2025-01-01T00:00:00Z,UPDATE_RECORD,profile_service,x,support_9390,SUCCESS,Policy action completed for support_9390.
+activity_5,2025-01-01T00:00:00Z,UPDATE_RECORD,profile_service,x,export_9490,SUCCESS,Policy action completed for export_9490.
+activity_6,2025-01-01T00:00:00Z,UPDATE_RECORD,profile_service,x,data_flow_9590,SUCCESS,Policy action completed for data_flow_9590.
+activity_7,2025-01-01T00:00:00Z,UPDATE_RECORD,profile_service,x,backup_9690,SUCCESS,Policy action completed for backup_9690.
+activity_8,2025-01-01T00:00:00Z,UPDATE_RECORD,profile_service,x,audit_record_9790,SUCCESS,Policy action completed for audit_record_9790.
+activity_9,2025-01-01T00:00:00Z,UPDATE_RECORD,profile_service,x,tombstone_9890,SUCCESS,Policy action completed for tombstone_9890.
+activity_10,2025-01-01T00:00:00Z,UPDATE_RECORD,profile_service,x,legal_hold_9990,SUCCESS,Policy action completed for legal_hold_9990.
+activity_11,2025-01-01T00:00:00Z,UPDATE_RECORD,profile_service,x,object_91090,SUCCESS,Policy action completed for object_91090.
+activity_12,2025-01-01T00:00:00Z,UPDATE_RECORD,profile_service,x,marketing_91190,SUCCESS,Policy action completed for marketing_91190.
+activity_13,2026-09-06T00:00:00Z,DELETE_RECORD,deletion_worker,x,account_41,SUCCESS,Deletion worker reported the requested operation as completed. Target resource: account_41.

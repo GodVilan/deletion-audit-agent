@@ -1,0 +1,4 @@
+{
+ "what": "two requests by one user; each resource belongs to the request its evidence falls under",
+ "rule": "R15"
+}

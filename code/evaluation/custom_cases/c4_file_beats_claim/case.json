@@ -1,0 +1,4 @@
+{
+ "what": "activity DELETE SUCCESS, but the latest admissible file shows the account present",
+ "rule": "R4 + R5"
+}
