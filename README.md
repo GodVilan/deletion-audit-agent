@@ -1,6 +1,20 @@
+<div align="center">
+
 # deletion-audit-agent
 
 **Evidence-backed audits of data-deletion requests: a bounded Claude agent plus a deterministic rules engine.**
+
+[![HackerRank Orchestrate: #56 of 4,090](https://img.shields.io/badge/HackerRank_Orchestrate-%2356_of_4%2C090-2EC866?logo=hackerrank&logoColor=white)](#result)
+[![Final score: 79.4/100](https://img.shields.io/badge/final_score-79.4%2F100-0A66C2)](#result)
+[![Sample status accuracy: 32/32](https://img.shields.io/badge/sample_status-32%2F32-brightgreen)](#results-32-public-samples-test-run-of-518)
+[![Tests: 21 passed](https://img.shields.io/badge/tests-21_passed-brightgreen?logo=pytest&logoColor=white)](code/tests)
+
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)](code/requirements.txt)
+[![Agent: Claude Opus 5.5](https://img.shields.io/badge/agent-Claude_Opus_5.5-D97757?logo=anthropic&logoColor=white)](#agent-loops)
+[![Built with Claude Code](https://img.shields.io/badge/built_with-Claude_Code-D97757?logo=anthropic&logoColor=white)](#how-it-was-built)
+[![License: MIT](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
+
+</div>
 
 For each deletion request, the pipeline:
 1. decides whether the person actually asked for deletion;
@@ -32,7 +46,7 @@ If that repository isn't accessible, the code, tests and custom evaluation cases
 
 ```bash
 pip install -r code/requirements.txt          # Python >= 3.10
-python3 -m pytest code/tests -q                # 21 rule tests (+ 1 integration test when dataset/ exists)
+python3 -m pytest code/tests -q                # 21 rule tests (+ 1 integration test when dataset/ exists and media can be read)
 python3 code/main.py                           # dataset/deletion_requests.csv -> output.csv (validated)
 python3 code/evaluation/main.py                # sample score + validator + distribution + custom cases
 ```
@@ -44,7 +58,7 @@ python3 code/evaluation/main.py                # sample score + validator + dist
   - The first keyed run extracts the screenshots and PDFs and caches the results in `code/cache/media/`.
 - **Without a key:**
   - Intent uses the deterministic negation-aware classifier, which agreed with the agent on all 518 test requests.
-  - Media can't be read unless `code/cache/media/` was populated by an earlier keyed run. Unread files are flagged `media_unread` in the run report and never guessed, so cases that depend on screenshot or PDF evidence will differ from a keyed run.
+  - Media can't be read unless `code/cache/media/` was populated by an earlier keyed run. Unread files are flagged `media_unread` in the run report and never guessed, so cases that depend on screenshot or PDF evidence will differ from a keyed run. On the samples, a run without a key or cache scores 31/32 on status instead of 32/32, because case_07's only evidence is a PDF; the integration test skips in that situation.
 
 ## Architecture
 
